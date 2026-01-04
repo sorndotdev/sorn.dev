@@ -117,6 +117,28 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <p class="text-slate-500 mb-8">Free and open source projects I maintain.</p>
 
     <div class="space-y-6">
+      <!-- llm-stack -->
+      <a href="https://github.com/sorndotdev/llm-stack" target="_blank" rel="noopener noreferrer" class="block glass-card rounded-2xl p-6 sm:p-8 group transition-all">
+        <div class="flex items-start justify-between mb-4">
+          <div>
+            <h3 class="text-xl font-semibold text-slate-900 group-hover:text-indigo-600 transition-colors">llm-stack</h3>
+            <p class="text-sm text-slate-600">sorndotdev/llm-stack</p>
+          </div>
+          <div class="flex items-center gap-1 text-sm text-slate-500">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <span>2</span>
+          </div>
+        </div>
+        <p class="text-slate-600 text-sm leading-relaxed mb-5">
+          Personal workspace of custom skills, agents, and API scripts.
+        </p>
+        <div class="flex flex-wrap gap-1.5">
+          {["LLM", "OpenCode", "Claude Code", "Spec-Driven Development", "Gherkin", "BDD", "TDD"].map(s => 
+            <span class="px-2 py-0.5 bg-slate-100 border border-slate-200 text-slate-600 text-xs rounded">{s}</span>
+          )}
+        </div>
+      </a>
+
       <!-- fmp4j -->
       <a href="https://github.com/marketdataapi/fmp4j" target="_blank" rel="noopener noreferrer" class="block glass-card rounded-2xl p-6 sm:p-8 group transition-all">
         <div class="flex items-start justify-between mb-4">
