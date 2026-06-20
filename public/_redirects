@@ -1,0 +1,7 @@
+# Old paths → home (content hidden for now)
+/register/    /    301
+/blog/*       /    301
+/feed/        /    301
+/comments/feed/ /  301
+# Old WordPress upload paths
+/wp-content/* /images/:splat 301
