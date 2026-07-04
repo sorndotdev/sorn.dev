@@ -2,11 +2,12 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="Case Studies" description="Case studies by Sorn Maksumic — Snapstock.app, a dividend stock analysis platform built with Vue, Java, and PostgreSQL.">
+<BaseLayout title="Case Studies" description="Projects by Sorn Maksumic — Snapstock.app dividend platform and TibiaPVP.com game server.">
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
     <h1 class="text-3xl sm:text-4xl font-bold text-white mb-2">Case Studies</h1>
     <p class="text-slate-500 mb-10">Projects I've built and shipped.</p>
 
+    <div class="space-y-6">
     <!-- Snapstock -->
     <div class="glass-card rounded-2xl overflow-hidden">
       <div class="p-6 sm:p-8">
@@ -61,6 +62,56 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </div>
         </div>
       </div>
+    </div>
+
+    <!-- TibiaPVP.com -->
+    <div class="glass-card rounded-2xl overflow-hidden">
+      <div class="p-6 sm:p-8">
+        <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-6">
+          <div>
+            <h2 class="text-2xl font-bold text-white mb-1">TibiaPVP.com</h2>
+            <p class="text-slate-400">Private game server (pre-university project)</p>
+          </div>
+          <span class="inline-flex items-center gap-1.5 text-sm text-slate-600 whitespace-nowrap">
+            tibiapvp.com (2017 — 2018)
+          </span>
+        </div>
+
+        <p class="text-slate-400 leading-relaxed mb-6">
+          My first real server project — before university. I ran a custom Tibia 7.4 
+          private server on a <strong class="text-white">Linux</strong> dedicated server in France, using the real game map. 
+          I modified the <strong class="text-white">C++ server source</strong>, wrote 
+          <strong class="text-white">Lua scripts</strong> for custom game mechanics, and 
+          used known reverse engineering techniques on the Windows 7.4 client, 
+          including DLL injection, to build an anti-bot client. Players earned coins by killing each other to buy 
+          custom weapons, armors, and spells.
+        </p>
+
+        <div class="mb-6">
+          <h3 class="text-xs font-semibold text-slate-600 uppercase tracking-[0.2em] mb-3">Screenshots</h3>
+          <div class="flex flex-wrap gap-3">
+            {["A4EwMha.jpg", "AdwgyVP.png", "Afe5egx.jpg", "pJoifkU.png"].map(f => {
+              const name = f.replace(/\.[^.]+$/, '');
+              const ext = f.includes('.') ? f.split('.').pop() : '';
+              return (
+                <a href={`/images/tibia/${f}`} target="_blank" rel="noopener noreferrer" class="shrink-0">
+                  <img src={`/images/tibia/${name}_thumb.${ext}`} alt={`TibiaPVP screenshot`} class="rounded-lg border border-navy-700/30 hover:border-indigo-500/50 transition-colors w-24 h-24 object-cover" />
+                </a>
+              );
+            })}
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-xs font-semibold text-slate-600 uppercase tracking-[0.2em] mb-3">Technology</h3>
+          <div class="flex flex-wrap gap-2">
+            {["C++", "Lua", "Linux", "DLL Injection", "Reverse Engineering", "TCP/IP"].map(s => 
+              <span class="px-2.5 py-1 bg-navy-800/30 border border-navy-700/30 text-slate-400 text-xs font-medium rounded-lg">{s}</span>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
     </div>
   </div>
 </BaseLayout>
