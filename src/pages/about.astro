@@ -15,12 +15,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <h2 class="text-xl font-semibold text-white">Sorn Maksumic</h2>
             <p class="text-slate-400">Dubai, United Arab Emirates</p>
           </div>
-          <div class="flex gap-4">
+          <div class="flex gap-4 items-center">
             <a href="https://github.com/sorndotdev" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-indigo-400 transition-colors text-sm font-medium">
               GitHub ↗
             </a>
             <a href="https://linkedin.com/in/sorndotdev" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-indigo-400 transition-colors text-sm font-medium">
               LinkedIn ↗
+            </a>
+            <a href="#" id="email-link" class="text-slate-500 hover:text-indigo-400 transition-colors text-sm font-medium">
+              Email
             </a>
           </div>
         </div>
@@ -134,3 +137,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </section>
   </div>
 </BaseLayout>
+
+<script>
+  // Email obfuscated from source to avoid spam harvesters
+  (function() {
+    const link = document.getElementById('email-link');
+    if (!link) return;
+    const user = 'maksumic';
+    const domain = 'protonmail.com';
+    const subject = 'Opportunity from sorn.dev';
+    link.href = `mailto:${user}@${domain}?subject=${encodeURIComponent(subject)}`;
+    link.textContent = `${user}@${domain}`;
+  })();
+</script>
