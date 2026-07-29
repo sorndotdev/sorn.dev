@@ -5,3 +5,5 @@
 /comments/feed/ /  301
 # Old WordPress upload paths
 /wp-content/* /images/:splat 301
+# Renamed pages
+/case-studies /projects 301

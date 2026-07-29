@@ -2,10 +2,10 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="Case Studies" description="Projects by Sorn Maksumic — Snapstock.app dividend platform and TibiaPVP.com game server.">
+<BaseLayout title="Projects" description="Projects by Sorn Maksumic — commercial projects, open source contributions, and tools I've built.">
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-    <h1 class="text-3xl sm:text-4xl font-bold text-white mb-2">Case Studies</h1>
-    <p class="text-slate-500 mb-10">Projects I've built and shipped.</p>
+    <h1 class="text-3xl sm:text-4xl font-bold text-white mb-2">Projects</h1>
+    <p class="text-slate-500 mb-10">Things I've built and shipped.</p>
 
     <div class="space-y-6">
     <!-- Snapstock -->
@@ -111,6 +111,35 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </div>
       </div>
     </div>
+
+    <!-- Open Source -->
+    <h2 id="open-source" class="text-2xl font-bold text-white mt-16 mb-6">Open Source</h2>
+    <p class="text-slate-500 mb-8">Free and open source projects I maintain.</p>
+
+    <div class="space-y-6">
+      <!-- fmp4j -->
+      <a href="https://github.com/marketdataapi/fmp4j" target="_blank" rel="noopener noreferrer" class="block glass-card rounded-2xl p-6 sm:p-8 group transition-all">
+        <div class="flex items-start justify-between mb-4">
+          <div>
+            <h3 class="text-xl font-semibold text-white group-hover:text-indigo-400 transition-colors">fmp4j</h3>
+            <p class="text-sm text-slate-400">marketdataapi/fmp4j</p>
+          </div>
+          <div class="flex items-center gap-1 text-sm text-slate-500">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <span>7</span>
+          </div>
+        </div>
+        <p class="text-slate-400 text-sm leading-relaxed mb-5">
+          A lightweight Java SDK for accessing the Financial Modeling Prep (FMP) API. 
+          Provides a clean, type-safe interface for stock market data, financial statements, 
+          and company profiles.
+        </p>
+        <div class="flex flex-wrap gap-1.5">
+          {["Java", "HTTP Client", "Financial Modeling Prep", "REST API"].map(s => 
+            <span class="px-2 py-0.5 bg-navy-800/30 border border-navy-700/30 text-slate-500 text-xs rounded">{s}</span>
+          )}
+        </div>
+      </a>
     </div>
   </div>
 </BaseLayout>
