@@ -17,7 +17,6 @@ const ogImage = `https://sorn.dev/images/og-default.png`;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/png" href="/favicon.png" />
-    <link rel="icon" href="/favicon.ico" sizes="32x32" />
     <meta name="generator" content={Astro.generator} />
     <title>{title} — Sorn.dev</title>
     {description && <meta name="description" content={description} />}
@@ -119,8 +118,8 @@ const ogImage = `https://sorn.dev/images/og-default.png`;
           <span class="hidden sm:inline text-sm text-slate-600">Software Engineer. Building Quality Software.</span>
         </a>
         <div class="flex items-center gap-4 sm:gap-8 text-xs sm:text-sm">
+          <a href="/" class="text-slate-400 hover:text-white transition-colors whitespace-nowrap">About</a>
           <a href="/articles" class="text-slate-400 hover:text-white transition-colors whitespace-nowrap">Articles</a>
-          <a href="/about" class="text-slate-400 hover:text-white transition-colors whitespace-nowrap">About</a>
           <a href="/projects" class="text-slate-400 hover:text-white transition-colors whitespace-nowrap">Projects</a>
         </div>
       </nav>
