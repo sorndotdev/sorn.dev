@@ -2,6 +2,7 @@
 layout: ../../layouts/BaseLayout.astro
 title: How Global Fintechs Implement Double-Entry Bookkeeping
 description: Every card payment, bank transfer, or currency exchange processed by a modern fintech ultimately becomes a series of immutable ledger entries. Debits and credits, payment lifecycles, and multi-currency accounting at internet scale.
+ogImage: /images/blog/ledger_thumbnail.png
 date: 2026-08-15
 prose: true
 ---

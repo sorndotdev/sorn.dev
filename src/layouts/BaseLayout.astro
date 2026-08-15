@@ -6,10 +6,11 @@ export interface Props {
   title: string;
   description?: string;
   prose?: boolean;
+  ogImage?: string;
 }
 
 const { title, description, prose } = Astro.props.frontmatter ?? Astro.props;
-const ogImage = `https://sorn.dev/images/og-default.png`;
+const ogImage = new URL(Astro.props.frontmatter?.ogImage ?? Astro.props.ogImage ?? "/images/og-default.png", "https://sorn.dev").href;
 const pageUrl = new URL(Astro.url.pathname, "https://sorn.dev").href;
 const rawDate = (Astro.props.frontmatter ?? Astro.props).date;
 const publishedDate = (rawDate instanceof Date ? rawDate.toISOString() : String(rawDate ?? "2026-08-15")).slice(0, 10);
