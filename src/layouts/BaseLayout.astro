@@ -131,13 +131,16 @@ const ogImage = `https://sorn.dev/images/og-default.png`;
       <div class={prose ? "prose-custom max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12" : ""}>
         <slot />
         {prose && (
-          <div class="article-author">
-            <img src="/images/blog/me.png" alt="Sorn" />
-            <div>
-              <p class="article-author-name">Written by Sorn</p>
-              <p>Questions, corrections, or thoughts? DM me on X (<a href="https://x.com/sorndotdev" target="_blank" rel="noopener noreferrer">@sorndotdev</a>) or find my email on the <a href="/">about page</a>.</p>
+          <>
+            <div class="article-author">
+              <img src="/images/blog/me.png" alt="Sorn" />
+              <div>
+                <p class="article-author-name">Written by Sorn</p>
+                <p>Questions, corrections, or thoughts? DM me on X (<a href="https://x.com/sorndotdev" target="_blank" rel="noopener noreferrer">@sorndotdev</a>) or find my email on the <a href="/">about page</a>.</p>
+              </div>
             </div>
-          </div>
+            <p class="article-author-copyright">&copy; 2026 Sorn.dev. Republishing or redistribution requires written permission.</p>
+          </>
         )}
       </div>
     </main>
@@ -294,5 +297,11 @@ const ogImage = `https://sorn.dev/images/og-default.png`;
     color: #f1f5f9;
     font-weight: 600;
     margin-bottom: 0.25rem;
+  }
+  .article-author-copyright {
+    color: #475569;
+    font-size: 0.875rem;
+    margin-top: 2.5rem;
+    margin-bottom: 0;
   }
 </style>
