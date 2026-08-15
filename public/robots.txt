@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Discoverability for AI agents and LLM crawlers
+Sitemap: https://sorn.dev/llms.txt

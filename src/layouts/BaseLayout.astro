@@ -10,6 +10,22 @@ export interface Props {
 
 const { title, description, prose } = Astro.props.frontmatter ?? Astro.props;
 const ogImage = `https://sorn.dev/images/og-default.png`;
+const pageUrl = new URL(Astro.url.pathname, "https://sorn.dev").href;
+const rawDate = (Astro.props.frontmatter ?? Astro.props).date;
+const publishedDate = (rawDate instanceof Date ? rawDate.toISOString() : String(rawDate ?? "2026-08-15")).slice(0, 10);
+const articleJson = prose
+  ? JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: title,
+      description: description ?? title,
+      datePublished: publishedDate,
+      dateModified: publishedDate,
+      mainEntityOfPage: { "@type": "WebPage", "@id": pageUrl },
+      author: { "@type": "Person", "name": "Sorn Maksumic", "url": "https://sorn.dev" },
+      publisher: { "@type": "Organization", "name": "Sorn.dev", "url": "https://sorn.dev" }
+    })
+  : null;
 ---
 
 <!doctype html>
@@ -24,7 +40,7 @@ const ogImage = `https://sorn.dev/images/og-default.png`;
     <meta property="og:title" content={`${title} — Sorn.dev`} />
     {description && <meta property="og:description" content={description} />}
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://sorn.dev" />
+    <meta property="og:url" content={pageUrl} />
     <meta property="og:image" content={ogImage} />
     <meta name="twitter:card" content="summary_large_image" />
     <script type="application/ld+json">
@@ -106,6 +122,22 @@ const ogImage = `https://sorn.dev/images/og-default.png`;
       ]
     }
     </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Sorn.dev",
+      "url": "https://sorn.dev",
+      "description": "Quality Software for a Better Digital World",
+      "inLanguage": "en",
+      "author": {
+        "@type": "Person",
+        "name": "Sorn Maksumic",
+        "url": "https://sorn.dev"
+      }
+    }
+    </script>
+    {articleJson && <script type="application/ld+json" set:html={articleJson} />}
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />

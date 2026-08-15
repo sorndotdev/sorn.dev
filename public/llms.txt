@@ -1,0 +1,15 @@
+# Sorn.dev
+
+> Quality Software for a Better Digital World
+
+Sorn Maksumic is a fintech software engineer (formerly Adyen Foreign Exchange, now Revolut Wealth & Trading). This site publishes original long-form articles on software engineering, fintech, and building things.
+
+## Articles
+
+- [How Global Fintechs Implement Double-Entry Bookkeeping](https://sorn.dev/articles/how-global-fintechs-use-double-entry-bookkeeping): Every card payment, bank transfer, or currency exchange processed by a modern fintech ultimately becomes a series of immutable ledger entries. Debits and credits, payment lifecycles, and multi-currency accounting at internet scale.
+
+## Pages
+
+- [About / Home](https://sorn.dev/): About Sorn Maksumic.
+- [Articles index](https://sorn.dev/articles): All long-form articles.
+- [Projects](https://sorn.dev/projects): Open-source and other projects.
