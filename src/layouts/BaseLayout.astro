@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import 'katex/dist/katex.min.css';
 
 export interface Props {
   title: string;
@@ -7,7 +8,7 @@ export interface Props {
   prose?: boolean;
 }
 
-const { title, description, prose } = Astro.props;
+const { title, description, prose } = Astro.props.frontmatter ?? Astro.props;
 const ogImage = `https://sorn.dev/images/og-default.png`;
 ---
 
@@ -115,7 +116,7 @@ const ogImage = `https://sorn.dev/images/og-default.png`;
       <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         <a href="/" class="flex items-center gap-3 group">
           <span class="text-lg font-bold gradient-text group-hover:opacity-80 transition-opacity">Sorn.dev</span>
-          <span class="hidden sm:inline text-sm text-slate-600">Software Engineer. Building Quality Software.</span>
+          <span class="hidden sm:inline text-sm text-slate-600">Quality Software for a Better Digital World</span>
         </a>
         <div class="flex items-center gap-4 sm:gap-8 text-xs sm:text-sm">
           <a href="/" class="text-slate-400 hover:text-white transition-colors whitespace-nowrap">About</a>
@@ -129,6 +130,15 @@ const ogImage = `https://sorn.dev/images/og-default.png`;
     <main class="flex-1">
       <div class={prose ? "prose-custom max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12" : ""}>
         <slot />
+        {prose && (
+          <div class="article-author">
+            <img src="/images/blog/me.png" alt="Sorn" />
+            <div>
+              <p class="article-author-name">Written by Sorn</p>
+              <p>Questions, corrections, or thoughts? DM me on X (<a href="https://x.com/sorndotdev" target="_blank" rel="noopener noreferrer">@sorndotdev</a>) or find my email on the <a href="/">about page</a>.</p>
+            </div>
+          </div>
+        )}
       </div>
     </main>
 
@@ -175,6 +185,22 @@ const ogImage = `https://sorn.dev/images/og-default.png`;
     line-height: 1.75;
     margin-bottom: 1rem;
   }
+  .prose-custom ol, .prose-custom ul {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .prose-custom ol {
+    list-style: decimal;
+  }
+  .prose-custom ol li {
+    padding-left: 1.25rem;
+  }
+  .prose-custom ul {
+    list-style: disc;
+  }
+  .prose-custom li {
+    margin-bottom: 0.5rem;
+  }
   .prose-custom a {
     color: #818cf8;
     text-decoration: underline;
@@ -209,6 +235,7 @@ const ogImage = `https://sorn.dev/images/og-default.png`;
   .prose-custom img {
     border-radius: 0.75rem;
     border: 1px solid #253044;
+    width: auto;
     max-width: 100%;
     height: auto;
   }
@@ -224,12 +251,48 @@ const ogImage = `https://sorn.dev/images/og-default.png`;
   .prose-custom th {
     color: #f1f5f9;
     font-weight: 600;
-    text-align: left;
     padding: 0.75rem;
     border-bottom: 1px solid #253044;
+  }
+  .prose-custom tr:not([align]) th:not([align]) {
+    text-align: left;
   }
   .prose-custom td {
     padding: 0.75rem;
     border-bottom: 1px solid #1a2332;
+  }
+  .prose-custom table.ledger {
+    width: auto;
+    margin: 1.75rem 0 1.25rem;
+  }
+  .prose-custom table.ledger th,
+  .prose-custom table.ledger td {
+    padding: 0.25rem 0.5rem;
+  }
+  .article-author {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #253044;
+  }
+  .article-author img {
+    width: 90px;
+    height: 90px;
+    border-radius: 9999px;
+    object-fit: cover;
+    border: 1px solid #253044;
+    flex-shrink: 0;
+  }
+  .article-author p {
+    color: #94a3b8;
+    line-height: 1.6;
+    margin: 0;
+  }
+  .article-author .article-author-name {
+    color: #f1f5f9;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
   }
 </style>
