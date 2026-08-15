@@ -303,6 +303,17 @@ const articleJson = prose
     width: auto;
     margin: 1.75rem 0 1.25rem;
   }
+  @media (max-width: 640px) {
+    .prose-custom table {
+      display: block;
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .prose-custom table.ledger {
+      width: 100%;
+    }
+  }
   .prose-custom table.ledger th,
   .prose-custom table.ledger td {
     padding: 0.25rem 0.5rem;
