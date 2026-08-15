@@ -75,15 +75,15 @@ Suppose you start a business with \$200 worth of inventory contributed by the ow
 </tr>
 </thead>
 <tbody>
-<tr align="right">
+<tr>
     <td>Inventory</td>
-    <td>$200 <span style="color:#10B981">↑</span></td>
-    <td>-</td>
+    <td align="right">$200 <span style="color:#10B981">↑</span></td>
+    <td align="right">-</td>
 </tr>
-<tr align="right">
+<tr>
     <td>Owner's Capital</td>
-    <td>-</td>
-    <td>$200 <span style="color:#10B981">↑</span></td>
+    <td align="right">-</td>
+    <td align="right">$200 <span style="color:#10B981">↑</span></td>
 </tr>
 </tbody>
 </table>
