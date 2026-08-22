@@ -1,12 +1,11 @@
 # Sorn.dev
 
-> Quality Software for a Better Digital World
+> Fintech Systems Engineer
 
 Sorn Maksumic is a fintech software engineer (formerly Adyen Foreign Exchange, now Revolut Wealth & Trading). This site publishes original long-form articles on software engineering, fintech, and building things.
 
 ## Articles
 
-- [The Enduring Properties of Spreadsheet Software](https://sorn.dev/articles/enduring-properties-of-spreadsheet-software): Spreadsheets have survived for decades not because they offer the most features, but because they combine properties that reinforce one another. The CODE checklist and what Christopher Alexander's centers teach us about compounding systems.
 - [How Global Fintechs Implement Double-Entry Bookkeeping](https://sorn.dev/articles/how-global-fintechs-use-double-entry-bookkeeping): Every card payment, bank transfer, or currency exchange processed by a modern fintech ultimately becomes a series of immutable ledger entries. Debits and credits, payment lifecycles, and multi-currency accounting at internet scale.
 
 ## Pages
