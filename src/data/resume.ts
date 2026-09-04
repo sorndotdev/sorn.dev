@@ -115,7 +115,7 @@ export const experience: Experience[] = [
     period: 'Aug 2023 — Jul 2025',
     location: 'Amsterdam, The Netherlands',
     description:
-      'Led a team of 4 engineers building Adyen\u2019s foreign exchange infrastructure: multi-currency bookkeeping, internal FX rates distribution, and hedging against partner bank.',
+      'Led a team of 4 engineers building Adyen\u2019s foreign exchange infrastructure: multi-currency bookkeeping, internal FX rates distribution, and hedging against partner bank. Responsible for ~10% of Adyen\u2019s net revenue.',
     skills: [
       'Technical Leadership',
       'Project Management',
