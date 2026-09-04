@@ -40,6 +40,7 @@ export interface Education {
   location: string;
   awardHref: string;
   awardLabel: string;
+  role?: string;
 }
 
 export interface Project {
@@ -165,7 +166,8 @@ export const education: Education = {
   location: 'Kongsberg, Norway',
   awardHref:
     'https://kongsbergdigital.com/news/students-won-award-in-collaboration-with-kongsberg-digital',
-  awardLabel: 'Won Best Bachelor Project 2021'
+  awardLabel: 'Won Best Bachelor Project 2021',
+  role: 'Math Assistant (TAA, paid) for first-year engineering students \u2014 Spring 2020'
 };
 
 export const credentials: Credential[] = [

@@ -247,6 +247,7 @@ const autoPrint = Astro.url.searchParams.get('print') === '1';
           </div>
           <p class="sub">{education.degree}</p>
           <p class="loc">{education.location}</p>
+          {education.role && <p class="sub">{education.role}</p>}
           <p class="edu-award"><a href={education.awardHref}>{education.awardLabel}</a></p>
         </div>
       </section>

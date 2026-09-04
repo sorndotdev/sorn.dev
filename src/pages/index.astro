@@ -93,6 +93,9 @@ import { credentials, education, experience, profile } from '../data/resume';
           <span class="text-xs text-slate-600 whitespace-nowrap">{education.period}</span>
         </div>
         <p class="text-slate-500 text-sm mb-3">{education.location}</p>
+        {education.role && (
+          <p class="text-slate-500 text-sm mb-3">{education.role}</p>
+        )}
         <a href={education.awardHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs text-slate-500 hover:text-indigo-600 transition-colors">
           <Icon name="shield" size={14} />
           {education.awardLabel}
